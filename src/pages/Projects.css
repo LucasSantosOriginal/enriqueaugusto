@@ -1,0 +1,69 @@
+.projects-container {
+  padding: 2rem 1rem;
+  color: #ddd;
+  font-family: 'Zain', sans-serif;
+  min-height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Colagem de vídeos e imagens */
+.video-collage {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  margin-top: 0;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.video-collage::-webkit-scrollbar {
+  display: none;
+}
+
+/* Wrapper de cada vídeo ou imagem */
+.video-wrapper {
+  flex: 0 0 48%;
+  max-width: 48%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+/* Estilo das imagens */
+.video-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 0px;
+  transition: transform 0.3s ease;
+}
+
+/* Estilo dos vídeos */
+.video-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 0px;
+}
+
+/* Zoom aplicado apenas na imagem 3.jpg */
+.zoom-image {
+  transform: scale(1.3);
+}
+
+/* Mobile: ocupa 100% */
+@media (max-width: 768px) {
+  .video-wrapper {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
