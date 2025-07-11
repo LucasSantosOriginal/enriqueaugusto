@@ -1,6 +1,6 @@
-# SITE DO ENRIQUE AGUSUTO
+# ENRIQUE AUGUSTO'S WEBSITE
 
-Esse site foi desenvolvido em React, typescript rensponsivel para mobile.
+This website was developed using React and TypeScript, and is responsive for mobile devices.
 
- [Link:](https://enriqueaugusto.com/)
+Link: [enriqueaugusto.com](https://enriqueaugusto.com/)
 
