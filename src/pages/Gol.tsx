@@ -1,17 +1,11 @@
 import "./Projects.css";
 import { Link } from "react-router-dom";
 
-function Projects() {
+function Gol() {
   const media = [
-    { type: "image", src: "media/byd.jpg" },
+    { type: "video", src: "media/3.mp4" },
     { type: "video", src: "media/3.mp4", link: "/gol" }, // link aqui
     { type: "video", src: "media/4.mp4" },
-    { type: "video", src: "media/byd-6.mp4" },
-    { type: "video", src: "media/byd-11.mp4" },
-    { type: "image", src: "media/byd-5.jpg" },
-    { type: "video", src: "media/skol-2.mp4" },
-    { type: "video", src: "media/skol-11.mp4" },
-    { type: "video", src: "media/skol-12.mp4" },
   ];
 
   return (
@@ -51,4 +45,4 @@ function Projects() {
   );
 }
 
-export default Projects;
+export default Gol;

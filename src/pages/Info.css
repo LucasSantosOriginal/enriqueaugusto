@@ -1,13 +1,27 @@
-.container-info {
-  padding: 0 1rem;
-  margin: 0;
+@font-face {
+  font-family: 'Poppins-Thin';
+  src: url(./assets/fonts/Poppins-Thin.ttf);
+  font-weight: normal;
+  font-style: normal;
 }
 
+
+
+.container-info {
+  padding: 0 1rem;
+  margin: 0 auto; /* centraliza o container se tiver largura */
+  display: flex;
+  justify-content: center;
+}
+
+
 .container-info p {
-  font-size: 20px;
-  margin: 0;
-  padding: 0;
+  font-family: 'Poppins-Thin' !important;
+  font-size: 25px;
+  max-width: 800px;
+  padding: 10px 0 100px 0;
   line-height: 1.6;
+  text-align: justify; /* justifica o texto */
 }
 
 @media (max-width: 768px) {

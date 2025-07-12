@@ -1,0 +1,16 @@
+
+
+.gol-title {
+    width: 500px;
+    padding: 2rem 1rem;
+    align-items: center;
+    display: block;
+}
+
+.gol-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+  }

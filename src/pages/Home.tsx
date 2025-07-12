@@ -1,7 +1,5 @@
-// src/pages/Home.tsx
+import "./Projects.css";
 
-function Home() {
-  return <div style={{ textAlign: "center", paddingTop: "4rem" }}></div>;
-}
+function Home() {}
 
 export default Home;

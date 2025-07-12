@@ -11,6 +11,13 @@
     font-weight: normal;
     font-style: normal;
   }
+
+  @font-face {
+    font-family: 'Poppins-Thin';
+    src: url(./assets/fonts/Poppins-Thin.ttf);
+    font-weight: normal;
+    font-style: normal;
+  }
   /* Reset básico */
   * {
     margin: 0;
@@ -28,7 +35,7 @@
 
 
   .site-title {
-    font-family: 'KavoInline', sans-serif;
+    font-family: 'Poppins-Thin', sans-serif;
     font-weight: 100;
     font-size: 3rem;
     font-style: normal;
@@ -77,6 +84,7 @@
 
   /* Menu desktop */
   .nav-desktop ul {
+    font-family: 'Poppins-Thin';
     list-style: none;
     display: flex;
     justify-content: center;
@@ -138,6 +146,8 @@
   }
 
   .nav-mobile ul {
+    font-family: 'Poppins-Thin';
+
     list-style: none;
     padding: 0;
     margin: 0;
@@ -150,14 +160,13 @@
   .nav-mobile ul li a {
     color: #aaa;
     text-decoration: none;
-    font-weight: 600;
-    font-size: 1.2rem;
+    font-weight: 400;
+    font-size: 0.5rem;
     display: flex;
     align-items: center;
     transition: color 0.3s ease, text-shadow 0.3s ease;
 
     gap: 0.5rem;
-    font-family: 'Zain', sans-serif !important; /* força a fonte aqui */
   }
 
   .nav-mobile ul li a:hover {

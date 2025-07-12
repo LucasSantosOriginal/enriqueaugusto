@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { Routes, Route, Link } from "react-router-dom";
-import Home from "./pages/Home";
+// import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 import Info from "./pages/Info";
+import Gol from "./pages/Gol";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -18,7 +19,7 @@ function App() {
           padding: "1rem 0",
         }}
       >
-        <h1 className="site-title">Enrique Augusto</h1>
+        <h1 className="site-title">ENRIQUE AUGUSTO</h1>
 
         <a
           href="https://www.instagram.com/enriqaugusto/"
@@ -44,18 +45,23 @@ function App() {
       <nav className="nav-desktop">
         <ul>
           <li>
-            <Link to="/projects" onClick={() => setMenuOpen(false)}>
-              Projects
+            <Link to="/" onClick={() => setMenuOpen(false)}>
+              HOME
+            </Link>
+          </li>
+          <li>
+            <Link to="/Projects" onClick={() => setMenuOpen(false)}>
+              PROJECTS
             </Link>
           </li>
           <li>
             <Link to="/info" onClick={() => setMenuOpen(false)}>
-              Info
+              INFO
             </Link>
           </li>
           <li>
             <Link to="/contact" onClick={() => setMenuOpen(false)}>
-              Contact
+              CONTACT
             </Link>
           </li>
         </ul>
@@ -65,18 +71,23 @@ function App() {
       <nav className={`nav-mobile ${menuOpen ? "active" : ""}`}>
         <ul>
           <li>
-            <Link to="/projects" onClick={() => setMenuOpen(false)}>
-              Projects
+            <Link to="/" onClick={() => setMenuOpen(false)}>
+              HOME
+            </Link>
+          </li>
+          <li>
+            <Link to="/Projects" onClick={() => setMenuOpen(false)}>
+              PROJECTS
             </Link>
           </li>
           <li>
             <Link to="/info" onClick={() => setMenuOpen(false)}>
-              Info
+              INFO
             </Link>
           </li>
           <li>
             <Link to="/contact" onClick={() => setMenuOpen(false)}>
-              Contact
+              CONTACT
             </Link>
           </li>
           <li>
@@ -94,10 +105,11 @@ function App() {
 
       {/* Rotas */}
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/projects" element={<Projects />} />
+        {/* <Route path="/" element={<Home />} /> */}
+        <Route path="/Projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/info" element={<Info />} />
+        <Route path="/gol" element={<Gol />} />
       </Routes>
     </div>
   );

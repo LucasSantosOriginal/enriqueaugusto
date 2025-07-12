@@ -3,14 +3,13 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://lucassantosoriginal.github.io/enriqueaugusto",
-
+"homepage": "https://enriqueaugusto.com",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "predeploy": "npm run build",
+    "predeploy": "npm run build && echo 'enriqueaugusto.com' > dist/CNAME",
     "deploy": "gh-pages -d dist"
 
   },
