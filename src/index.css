@@ -1,222 +1,273 @@
-  @import 'bootstrap-icons/font/bootstrap-icons.css';
-  @import url('https://fonts.googleapis.com/css2?family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap');
+@import 'bootstrap-icons/font/bootstrap-icons.css';
 
-  @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+/* 
+@import url('https://fonts.googleapis.com/css2?family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
 
 
-  @font-face {
-    font-family: 'KavoInline';
-    src: url(./assets/fonts/KavoInlineFreeDemo-MA7ex.otf);
-    font-weight: normal;
-    font-style: normal;
+@font-face {
+  font-family: 'KavoInline';
+  src: url(./assets/fonts/KavoInlineFreeDemo-MA7ex.otf);
+  font-weight: norsite-titlemal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins-Thin';
+  src: url(./assets/fonts/Poppins-Thin.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Pixeboy';
+  src: url('/src/assets/fonts/Pixelzone.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+} */
+
+@font-face {
+  font-family: 'BabelSans';
+  src: url('/src/assets/fonts/babel_sans/BabelSans.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo base */
+html, body {
+  font-family: 'BabelSans', serif;
+  background-color: #000000;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+
+.site-title {
+  font-weight: 300;
+  font-size: 5rem;
+  font-style: normal;
+  text-align: center;
+  letter-spacing: 10px;
+  margin: 0 auto;
+  padding: 1px;
+  color: rgb(255, 255, 255);
+}
+
+
+.site-subtitle {
+font-size: 2rem;
+letter-spacing: 10px;
+opacity: 0.7;
+
+
+}
+
+/* Container principal */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+
+
+/* Header */
+header {
+  position: relative; /* Necessário para posicionar o botão */
+  padding: 5px;
+  border-bottom: 1px solid #c5b4b4;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+}
+
+header a {
+  color: #f5f5f5;
+  font-size: 1.8rem;
+  text-decoration: none;
+}
+
+/* Ícone Instagram com hover gradiente */
+.instagram-link i {
+  color: #f5f5f5;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  margin: 35px;
+
+}
+
+/* .instagram-link:hover i {
+  background: linear-gradient(330deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: background 0.3s ease; 
+}
+  */
+
+/* Menu desktop */
+.nav-desktop ul {
+  font-family: 'BabelSans';
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-desktop ul li a {
+  color: #aaa;
+  font-size: 20px;  
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  transition: color 0.5s ease;
+  text-decoration: none;
+  margin: 25px;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+
+}
+
+.nav-desktop li {
+  padding: 10px;
+  font-size: 10px;
+}
+
+.nav-desktop ul li a:hover {
+  color: #fdf7f7;
+  text-shadow:
+  0 0 2px #c2a8a8,
+  0 0 1px #471717,
+  0 0 5px #14a5b8;}
+
+/* Botão hamburguer */
+.menu-toggle {
+
+  background: none;
+  border: none;
+  color: #f5f5f5;
+  font-size: 2.5rem;
+  cursor: pointer;
+  display: none;
+  margin-left: auto;
+}
+
+/* Menu mobile */
+.nav-mobile {
+
+  margin: 30px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 0;
+  transform-origin: top;
+  transform: scaleY(0.8) translateY(-10px);
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.nav-mobile.active {
+  transform: scaleY(1) translateY(0);
+  opacity: 1;
+  height: auto;
+}
+
+.nav-mobile ul {
+  font-family: 'BabelSans';
+
+  list-style: none;
+  padding: 0  ;
+  margin: 0;
+}
+
+.nav-mobile ul li {
+  margin-bottom: 1rem;
+  margin-top: 20px;
+
+}
+
+.nav-mobile ul li a {
+  font-family: 'BabelSans', serif;
+  color: #aaa;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+
+}
+
+.nav-mobile ul li a:hover {
+  color: #fdf7f7;
+  text-shadow:
+  0 0 2px #fdf7f7,
+  0 0 1px #fdf7f7,
+  0 0 5px #fdf7f7;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .nav-desktop {
+    display: none;
   }
-
-  @font-face {
-    font-family: 'Poppins-Thin';
-    src: url(./assets/fonts/Poppins-Thin.ttf);
-    font-weight: normal;
-    font-style: normal;
-  }
-  /* Reset básico */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  /* Estilo base */
-  html, body {
-    font-family: 'Zain', sans-serif !important;
-    background-color: #000000;
-    color: #ddd;
-    line-height: 1.6;
-  }
-
-
-  .site-title {
-    font-family: 'Poppins-Thin', sans-serif;
-    font-weight: 100;
-    font-size: 3rem;
-    font-style: normal;
-    text-align: center;
-    margin: 0 auto;
-    padding: 1px;
-  }
-
-  /* Container principal */
-  .container {
-    width: 90%;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 1rem;
-  }
-
-  /* Header */
-  header {
-    padding: 5px;
-    border-bottom: 1px solid #c5b4b4;
+  .nav-mobile ul li a {
+    font-family: 'BabelSans', serif;
+    color: #aaa;
+    text-decoration: none;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-  }
-
-  header a {
-    color: #f5f5f5;
-    font-size: 1.8rem;
-    text-decoration: none;
-  }
-
-  /* Ícone Instagram com hover gradiente */
-  .instagram-link i {
-    color: #f5f5f5;
-    transition: all 0.5s ease;
-    cursor: pointer;
-  }
-
-  .instagram-link:hover i {
-    background: linear-gradient(330deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transition: background 0.3s ease;
-  }
-
-  /* Menu desktop */
-  .nav-desktop ul {
-    font-family: 'Poppins-Thin';
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    padding: 0;
-    margin: 0;
-  }
-
-  .nav-desktop ul li a {
-    color: #aaa;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 10px;
-    transition: color 0.3s ease;
-    text-decoration: none;
-    margin: 15px;
+    font-size: 3px;
     transition: color 0.3s ease, text-shadow 0.3s ease;
+  }
+  
 
+  header {
+    justify-content: flex-end;
+    border-bottom: 0px;
   }
 
-  .nav-desktop li {
-    padding: 10px;
-    font-size: 20px;
-  }
-
-  .nav-desktop ul li a:hover {
-    color: #fdf7f7;
-    text-shadow:
-    0 0 2px #fdf7f7,
-    0 0 1px #fdf7f7,
-    0 0 5px #fdf7f7;}
-
-  /* Botão hamburguer */
-  .menu-toggle {
-    background: none;
-    border: none;
-    color: #f5f5f5;
-    font-size: 2.5rem;
-    cursor: pointer;
+  header a.instagram-link {
     display: none;
-    margin-left: auto;
   }
+  .site-title {
+    font-size: 1.5rem;
+        font-family: 'BabelSans', serif;
 
-  /* Menu mobile */
-  .nav-mobile {
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    margin-top: 1rem;
-    transform-origin: top;
-    transform: scaleY(0);
-    opacity: 0;
-    transition: transform 0.3s ease, opacity 0.3s ease;
   }
-
-  .nav-mobile.active {
-    transform: scaleY(1);
-    opacity: 1;
+  .site-subtitle {
+    font-size: 1rem;
   }
+  .menu-toggle {
+    position: absolute;
+    left: 0px; /* alinhado à esquerda com margem */
+    top: 10%;
+    left: -7%;
+    transform: translateY(-50%);
+    display: inline-block;
+    margin: 1px 1px 1px;
+    padding-top: 50px;
 
-  .nav-mobile ul {
-    font-family: 'Poppins-Thin';
+}
 
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .nav-mobile ul li {
-    margin-bottom: 1rem;
+@media (max-width: 480px) {
+  html, body {
+    font-size: 14px;
   }
 
   .nav-mobile ul li a {
-    color: #aaa;
-    text-decoration: none;
-    font-weight: 400;
-    font-size: 0.5rem;
-    display: flex;
-    align-items: center;
-    transition: color 0.3s ease, text-shadow 0.3s ease;
-
-    gap: 0.5rem;
+    font-size:2rem;
+    padding-top: 30px;
   }
 
-  .nav-mobile ul li a:hover {
-    color: #fdf7f7;
-    text-shadow:
-    0 0 2px #fdf7f7,
-    0 0 1px #fdf7f7,
-    0 0 5px #fdf7f7;
+  header a.instagram-link {
+    display: none;
   }
-
-  /* Responsivo */
-  @media (max-width: 768px) {
-    .nav-desktop {
-      display: none;
-    }
-
-    .menu-toggle {
-      display: block;
-      margin-left: auto;
-    }
-    .nav-mobile ul li a {
-      transition: color 0.3s ease, text-shadow 0.3s ease;
-    }
-    .nav-mobile ul li a:hover {
-      color: #fdf7f7;
-      text-shadow:
-      0 0 2px #fdf7f7,
-      0 0 1px #fdf7f7,
-      0 0 5px #fdf7f7;
-    }
-
-    header {
-      justify-content: flex-end;
-    }
-
-    header a.instagram-link {
-      display: none;
-    }
-  }
-
-  @media (max-width: 480px) {
-    html, body {
-      font-size: 14px;
-    }
-
-    .nav-mobile ul li a {
-      font-size: 2rem;
-    }
-
-    header a.instagram-link {
-      display: none;
-    }
-  }
+}
+};

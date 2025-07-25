@@ -4,7 +4,12 @@
   font-weight: normal;
   font-style: normal;
 }
-
+@font-face {
+  font-family: 'Pixeboy';
+  src: url('/src/assets/fonts/Pixelzone.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 
 .container-info {
@@ -16,8 +21,10 @@
 
 
 .container-info p {
-  font-family: 'Poppins-Thin' !important;
-  font-size: 25px;
+  font-family: 'BabelSans' serif;
+  color: wheat;
+  margin-top: 10px;
+  font-size: 35px;
   max-width: 800px;
   padding: 10px 0 100px 0;
   line-height: 1.6;

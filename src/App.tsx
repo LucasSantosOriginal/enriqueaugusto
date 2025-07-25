@@ -1,36 +1,31 @@
 import { useState } from "react";
 import { Routes, Route, Link } from "react-router-dom";
-// import Home from "./pages/Home";
+
+import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 import Info from "./pages/Info";
+import Sminorff from "./pages/sminorff"; // ← arquivo está com letra minúscula
+import Beats from "./pages/Beats"; // ← arquivo está com letra minúscula
+
 import Gol from "./pages/Gol";
+import Huggies from "./pages/Huggies";
+import Motorola from "./pages/Motorola";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <div className="container">
-      <header
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          padding: "1rem 0",
-        }}
-      >
-        <h1 className="site-title">ENRIQUE AUGUSTO</h1>
-
-        <a
-          href="https://www.instagram.com/enriqaugusto/"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Instagram"
-          style={{ color: "#f5f5f5", fontSize: "1.8rem" }}
-          className="instagram-link"
-        >
-          <i className="bi bi-instagram"></i>
-        </a>
+      <header className="header">
+        <div className="site-header">
+          {/* <h1 className="site-title">ENRIQUE AUGUSTO</h1> */}
+          {/* <img
+            src="/media/esquilo-1.gif"
+            alt="Esquilo animado"
+            className="site-gif"
+          /> */}
+        </div>
 
         <button
           className="menu-toggle"
@@ -63,6 +58,17 @@ function App() {
             <Link to="/contact" onClick={() => setMenuOpen(false)}>
               CONTACT
             </Link>
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/enriqaugusto/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              className="instagram-link"
+            >
+              <i className="bi bi-instagram"></i>
+            </a>
           </li>
         </ul>
       </nav>
@@ -103,13 +109,17 @@ function App() {
         </ul>
       </nav>
 
-      {/* Rotas */}
       <Routes>
-        {/* <Route path="/" element={<Home />} /> */}
+        <Route path="/" element={<Home />} />
         <Route path="/Projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/info" element={<Info />} />
+        <Route path="/sminorff" element={<Sminorff />} />
+        <Route path="/Beats" element={<Beats />} />
+
         <Route path="/gol" element={<Gol />} />
+        <Route path="/Huggies" element={<Huggies />} />
+        <Route path="/Motorola" element={<Motorola />} />
       </Routes>
     </div>
   );

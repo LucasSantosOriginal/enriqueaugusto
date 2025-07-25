@@ -4,6 +4,19 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'Pixeboy';
+  src: url('/src/assets/fonts/Pixelzone.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BabelSans';
+  src: url('/src/assets/fonts/BabelSans');
+  font-weight: normal;
+  font-style: normal;
+}
 
 .contact-page {
   display: flex;
@@ -14,9 +27,9 @@
 }
 
 .contact-title {
-  font-family: 'Poppins-Thin' ;
+  font-family: 'BabelSans' ;
   color: #ffffff9a;
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-bottom: 2rem;
   text-align: center;
   position: relative;
@@ -33,21 +46,25 @@
     color: #ccc;
   }
   50% {
-    color: #ff000071;
+    color: #fc8888dc;
     /* border-bottom-color: #ff000071;  */
   }
+ 
 }
 .contact-form {
+  font-family: 'BabelSans' ;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  width: 1080px;
-  max-width: 600px;
+  width: 500px;
+  height: 500px;
+  max-width: 90%;
 }
+
 
 .contact-form input,
 .contact-form textarea {
-  font-family: 'Poppins-Thin', sans-serif;
+  font-family: 'BabelSans', sans-serif;
   font-size: 1rem;
   padding: 0.75rem 1rem;
   border: 1px solid #444;
@@ -58,43 +75,42 @@
 }
 
 .contact-form button {
-  font-family: 'Poppins-Thin', sans-serif;
-
+  font-family: 'BabelSans';
   background-color: transparent;
   border: 1px solid #ddd;
   color: #ddd;
-  padding: 0.75rem;
+  padding: 1rem;
   font-size: 1rem;
-  border-radius: 1px;
   cursor: pointer;
-  transition: all 0.3s ease;
-  letter-spacing: 8px;
-  
+  letter-spacing: 10px;
+  margin: 50px;
+
+  transition: background 0.5s ease, font-size 0.3s ease, -webkit-text-fill-color 0.5s ease;
 }
 
-
 .contact-form button:hover {
-  background-color: #ffffff0a;
-  color: #ff0000;
-  font-size: 20px;
+  background: linear-gradient(330deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+  -webkit-background-clip: text;
+  background-clip: text; 
+  -webkit-text-fill-color: transparent;
 }
 
 /* Responsivo */
 @media (max-width: 768px) {
   .contact-title {
-    font-size: 1.8rem;
+    font-size: 3rem;
   }
   .contact-form {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 5px;
     width: 800px;
     max-width: 100%;
   }
 
   .contact-form input,
   .contact-form textarea {
-    font-size: 0.95rem;
+    font-size: 1.5rem;
   }
 }
 

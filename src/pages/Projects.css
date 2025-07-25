@@ -1,69 +1,138 @@
 .projects-container {
-  padding: 2rem 1rem;
+  padding: 0rem 1rem 2rem;
   color: #ddd;
   font-family: 'Poppins-Thin', sans-serif;
   min-height: 100vh;
-}
-
-h1 {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-/* Colagem de vídeos e imagens */
-.video-collage {
+  position: relative;
+  overflow: hidden;
   display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carousel-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  overflow-y: auto;
+}
+
+/* Carrossel */
+.video-collage {
+  opacity: 0.55;
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
   scroll-behavior: smooth;
-  margin-top: 0;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  width: 100%;
+  scroll-padding: 1rem;
+  padding: 2rem 0;
 }
 
 .video-collage::-webkit-scrollbar {
   display: none;
 }
 
-/* Wrapper de cada vídeo ou imagem */
 .video-wrapper {
-  flex: 0 0 48%;
-  max-width: 48%;
-  aspect-ratio: 16 / 9;
+  scroll-snap-align: center;
+  flex: 0 0 95%;
+  max-width: 95%;
+  aspect-ratio: 16 / 7;
   overflow: hidden;
-  border-radius: 20px;
+  border-radius: 60px;
 }
 
-/* Estilo das imagens */
+.video-wrapper video,
 .video-wrapper img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
   border-radius: 0px;
-  transition: transform 0.3s ease;
 }
 
-/* Estilo dos vídeos */
-.video-wrapper video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  border-radius: 0px;
+/* Setas minimalistas */
+.arrow {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  font-size: 5rem;
+  color: #cfcece;
+  background: transparent;
+  border: none;
+  text-shadow: -1px 0 black;
+  cursor: pointer;
+  z-index: 10;
+  padding: 0 1rem;
+  opacity: 1;
+  transition: opacity 0.3s ease;
 }
 
-/* Zoom aplicado apenas na imagem 3.jpg */
-.zoom-image {
-  transform: scale(1.3);
+.arrow:hover {
+  opacity: 1;
+  color: #ffffff;
 }
 
-/* Mobile: ocupa 100% */
+.arrow.left {
+  left: 0;
+}
+
+.arrow.right {
+  right: 0;
+}
+
+.desktop-only {
+  display: inline-block;
+}
+
+.mobile-only {
+  display: none;
+}
+
+.dots {
+  margin-top: 1rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #666;
+  transition: background 0.3s;
+}
+
+.dot.active {
+  background: #fff;
+}
+
+/* Responsivo */
 @media (max-width: 768px) {
   .video-wrapper {
     flex: 0 0 100%;
     max-width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+
+  .mobile-only {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 8px;
+  }
+
+  .desktop-only {
+    display: none !important;
+  }
+
+  .arrow {
+    font-size: 1.5rem;
+    padding: 0 0.5rem;
+    top: 38%;
   }
 }

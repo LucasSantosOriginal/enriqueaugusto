@@ -1,0 +1,15 @@
+.home-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column; /* para empilhar o h1 e o gif */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+  }
+  
+  .gif {
+    width: 140px; /* ajuste o tamanho conforme desejar */
+    height: auto;
+  }
+
