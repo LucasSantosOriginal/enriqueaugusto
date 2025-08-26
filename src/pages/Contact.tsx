@@ -3,6 +3,8 @@ import "./contact.css";
 function Contacts() {
   return (
     <div className="container contact-page">
+      <h3 className="phone-contact">Phone: +55 11 91318-3650</h3>
+
       <h1 className="contact-title"> CONTACT </h1>
       <form
         action="https://formsubmit.co/enriqueaugusto2000@gmail.com"

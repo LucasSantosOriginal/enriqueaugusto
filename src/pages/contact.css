@@ -95,6 +95,13 @@
   -webkit-text-fill-color: transparent;
 }
 
+.phone-contact {
+  font-size: 30px;
+  letter-spacing: 5px;
+  padding: 30px;
+  opacity: 0.3;
+  font-weight: 500;
+}
 /* Responsivo */
 @media (max-width: 768px) {
   .contact-title {
@@ -111,6 +118,10 @@
   .contact-form input,
   .contact-form textarea {
     font-size: 1.5rem;
+  }
+  .phone-contact{
+    font-size: 10px;
+    margin: 14px;
   }
 }
 
